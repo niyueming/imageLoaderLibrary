@@ -33,6 +33,7 @@ public interface NImageLoader<T extends View> {
     void setImageURI(@NonNull T imageView,@Nullable String uri);
     void setImageURI(@NonNull T imageView,@Nullable String uri,final NImageDownloadListener listener);
     void setImageURI(@NonNull T imageView,@Nullable Uri uri);
+    void setImageURI(@NonNull T imageView,@Nullable Uri uri,NImageOptions options);
     void setImageCorner(@NonNull T imageView,@Nullable Uri uri,float corner);
     void setImageCornerWithBorder(@NonNull T imageView, @Nullable Uri uri, float corner, @ColorRes int borderColor,int borderWidth);
     void setImageCorner(@NonNull T imageView,@Nullable Uri uri,float left_top,float right_top,float right_bottom,float left_bottom);
