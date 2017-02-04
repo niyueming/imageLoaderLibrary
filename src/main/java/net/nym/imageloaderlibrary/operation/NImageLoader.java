@@ -44,6 +44,7 @@ public interface NImageLoader<T extends View> {
 
     void startAnimate(@NonNull T imageView);
     void stopAnimate(@NonNull T imageView);
+    void toggleAnimate(@NonNull T imageView);
 
     void clearMemoryCaches();
     void clearDiskCaches();
