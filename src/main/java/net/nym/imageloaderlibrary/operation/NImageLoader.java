@@ -12,6 +12,7 @@
 package net.nym.imageloaderlibrary.operation;
 
 import android.net.Uri;
+import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
@@ -30,7 +31,18 @@ public interface NImageLoader<T extends ImageView> {
     boolean isPaused();
 
     void setImageURI(@NonNull T imageView,@Nullable String uri);
+    void setImageURI(@NonNull T imageView,@Nullable String uri,final NImageDownloadListener listener);
     void setImageURI(@NonNull T imageView,@Nullable Uri uri);
+    void setImageCorner(@NonNull T imageView,@Nullable Uri uri,float corner);
+    void setImageCornerWithBorder(@NonNull T imageView, @Nullable Uri uri, float corner, @ColorRes int borderColor,int borderWidth);
+    void setImageCorner(@NonNull T imageView,@Nullable Uri uri,float left_top,float right_top,float right_bottom,float left_bottom);
+    void setImageCircle(@NonNull T imageView,@Nullable Uri uri,float radius);
+    void setImageCircleWithBorder(@NonNull T imageView, @Nullable Uri uri,float radius, @ColorRes int borderColor,int borderWidth);
+    void setImageAnimateURI(@NonNull T imageView,@Nullable String uri);
+    void setImageAnimateURI(@NonNull T imageView,@Nullable String uri,final NImageDownloadListener listener);
+
+    void startAnimate(@NonNull T imageView);
+    void stopAnimate(@NonNull T imageView);
 
     void clearMemoryCaches();
     void clearDiskCaches();
