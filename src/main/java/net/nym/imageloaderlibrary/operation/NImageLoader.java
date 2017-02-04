@@ -15,7 +15,7 @@ import android.net.Uri;
 import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.widget.ImageView;
+import android.view.View;
 
 /**
  * @author niyueming
@@ -23,7 +23,7 @@ import android.widget.ImageView;
  * @time 14:05
  */
 
-public interface NImageLoader<T extends ImageView> {
+public interface NImageLoader<T extends View> {
 
     void shutDown();
     void pause();
