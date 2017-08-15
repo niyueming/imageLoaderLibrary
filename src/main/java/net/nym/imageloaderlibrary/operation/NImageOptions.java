@@ -158,6 +158,8 @@ public final class NImageOptions {
                 throw new IllegalArgumentException("radii should have exactly 8 values");
             }
 
+            mCornersRadii = radii;
+
             return this;
         }
 
